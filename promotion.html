@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dopetrope by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="left-sidebar is-preload">
+		<div class="page-wrapper">
+
+			<!-- Header -->
+				<section class="header">
+
+					<!-- Logo -->
+					<h1>
+						<a href="index.html">
+							<img src="images/barogo_logo-removebg-preview2.png"  style="height: 60px;" alt="">
+						</a>
+					</h1>
+
+					<!-- Nav -->
+						<nav class="nav">
+							<ul>
+								<li><a href="index.html">회사소개</a></li>
+								<li><a href="product.html">제품소개</a></li>
+								<li class="current"><a href="promotion.html">홍보센터</a></li>
+								<li><a href="contact.html">문의하기</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row left-row">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+								<section class="box left-box active" id="promotion_1">
+									<header>
+										<h3>특허기술이 낳은 난방혁신</h3>
+									</header>
+									<p>2023-04-09</p>
+								</section>
+								<section class="box left-box" id="promotion_2">
+									<header>
+										<h3>"바로고 난방"은?</h3>
+									</header>
+									<p>2023-04-09</p>
+								</section>
+								<section class="box left-box" id="promotion_3">
+									<header>
+										<h3>건강 난방 시스템</h3>
+									</header>
+									<p>2023-04-09</p>
+								</section>
+							</div>
+							<div class="col-10 col-12-medium imp-medium right-row">
+
+								<!-- Content -->
+								<article class="box post">
+									
+								</article>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>에스피씨 에너지(주)</li>
+											<li>새롬테크</li>
+											<li>경진보드(주)</li>
+										</ul><br><br>
+										<ul style="list-style: none;">
+											<li>대표전화: 1670-8597</li>
+											<li>&copy; Untitled. All rights reserved.</li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+	<script>
+		(function(){
+			let changePost = function(imgNm){
+				$(".post")
+					.css("background", "url('" + imgNm + "')")
+					.css("background-size", "contain")
+					.css("background-position", "top center") 
+					.css("background-repeat", "no-repeat")
+			};
+
+			changePost("images/230222_바로고 난방_전단_210x297_1.jpg");
+			
+			$("#promotion_1").on("click", function() {
+				$(".left-box").removeClass("active");
+				$(this).addClass("active");
+
+				changePost("images/230222_바로고 난방_전단_210x297_1.jpg");
+			});
+
+			$("#promotion_2").on("click", function() {
+				$(".left-box").removeClass("active");
+				$(this).addClass("active");
+				
+				changePost("images/230222_바로고 난방_전단_210x297_2.jpg");
+			});
+
+			$("#promotion_3").on("click", function() {
+				$(".left-box").removeClass("active");
+				$(this).addClass("active");
+				
+				changePost("images/화면 캡처 2023-04-11 230156.png");
+			});
+		})();
+	</script>
+</html>
