@@ -110,6 +110,7 @@
 	</body>
 	<script>
 		(function(){
+			let searchParam = location.search;
 			let changePost = function(imgNm){
 				$(".post")
 					.css("background", "url('" + imgNm + "')")
@@ -118,7 +119,19 @@
 					.css("background-repeat", "no-repeat")
 			};
 
-			changePost("images/230222_바로고 난방_전단_210x297_1.jpg");
+
+			$(".left-box").removeClass("active");
+
+			if("?m=1" === searchParam) {
+				$("#promotion_1").addClass("active");
+				changePost("images/230222_바로고 난방_전단_210x297_1.jpg");
+			} else if("?m=2" === searchParam) {
+				$("#promotion_2").addClass("active");
+				changePost("images/230222_바로고 난방_전단_210x297_2.jpg");
+			} else {
+				$("#promotion_3").addClass("active");
+				changePost("images/화면 캡처 2023-04-11 230156.png");
+			}
 			
 			$("#promotion_1").on("click", function() {
 				$(".left-box").removeClass("active");
